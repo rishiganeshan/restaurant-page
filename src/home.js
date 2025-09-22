@@ -1,12 +1,13 @@
 // console.log("yo")
 import gusteauImage from "../gusteau.png"
 
-const content = document.getElementById('content')
+function createHomeDiv() {
+    const content = document.getElementById('content')
 
-const header = document.createElement('h1')
-header.textContent = "Welcome to Gusteau's"
-const dummy = document.createElement('div')
-dummy.textContent = `“Anyone can cook — but at Gusteau’s, anyone can discover the joy of dining.”     
+    const header = document.createElement('h1')
+    header.textContent = "Welcome to Gusteau's"
+    const dummy = document.createElement('div')
+    dummy.textContent = `“Anyone can cook — but at Gusteau’s, anyone can discover the joy of dining.”     
             Step inside Paris’ most beloved kitchen, where every meal is prepared with passion, creativity, and a touch of magic.At
 Gusteau’s, we honor the legacy of Chef Auguste Gusteau — a chef who believed that food should be an adventure, full of
             flavor and heart.
@@ -21,14 +22,20 @@ gathering, or simply to indulge, you’ll find yourself swept into a world where
             “Anyone can cook.”
             
             Your table is waiting.`
-const image = document.createElement("img");
-image.src = gusteauImage;
-image.setAttribute("width", "300px")
+    const image = document.createElement("img");
+    image.src = gusteauImage;
+    image.setAttribute("width", "300px")
 
-content.appendChild(header)
-content.appendChild(image)
+    content.appendChild(header)
+    content.appendChild(image)
 
-content.appendChild(dummy)
+    content.appendChild(dummy)
+
+}
+
+export { createHomeDiv }
+
+
 
 
 
